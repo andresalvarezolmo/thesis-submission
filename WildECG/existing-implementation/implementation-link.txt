@@ -1,0 +1,1 @@
+To clone the backbone implementation used for benchmarking please run this command: git clone https://github.com/bowang-lab/ECG-FM.git

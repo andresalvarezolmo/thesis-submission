@@ -1,0 +1,1 @@
+To clone the backbone implementation used for benchmarking please run this command: git clone git@github.com:BINE022/EEGPT.git

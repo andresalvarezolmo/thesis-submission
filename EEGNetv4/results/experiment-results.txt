@@ -1,0 +1,19 @@
+EEGNet Experiments
+
+This file reports performance under zero-shot (ZS) and fine-tuned (FT) settings, including a comparison between standard logistic regression (ZS + LR) and k-nearest neighbour (ZS + KNN) heads for EEGNetv4
+
+Cho2017
+Setting     Accuracy      F1           Recall       Specificity   Precision
+ZS + LR     0.503 ± 0.004 0.436 ± 0.003 0.503 ± 0.004 0.503 ± 0.004 0.489 ± 0.004
+ZS + KNN    0.609 ± 0.003 0.606 ± 0.003 0.609 ± 0.003 0.609 ± 0.003 0.611 ± 0.003
+FT          0.632 ± 0.002 0.629 ± 0.002 0.632 ± 0.002 0.632 ± 0.002 0.635 ± 0.002
+
+EEGNet - Weibo2014
+ZS + LR     0.501 ± 0.010 0.407 ± 0.022 0.501 ± 0.010 0.501 ± 0.010 0.424 ± 0.024
+ZS + KNN    0.634 ± 0.063 0.629 ± 0.062 0.634 ± 0.063 0.634 ± 0.063 0.638 ± 0.063
+FT          0.726 ± 0.020 0.724 ± 0.021 0.726 ± 0.020 0.726 ± 0.020 0.733 ± 0.021
+
+EEGNet - Zhou2016
+ZS + LR     0.311 ± 0.011 0.261 ± 0.012 0.311 ± 0.011 0.666 ± 0.006 0.259 ± 0.013
+ZS + KNN    0.619 ± 0.022 0.614 ± 0.021 0.619 ± 0.022 0.810 ± 0.010 0.630 ± 0.021
+FT          0.680 ± 0.013 0.674 ± 0.013 0.680 ± 0.013 0.840 ± 0.007 0.687 ± 0.014

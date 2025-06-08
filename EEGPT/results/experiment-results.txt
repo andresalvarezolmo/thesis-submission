@@ -1,0 +1,11 @@
+EEGPT Experiments
+
+This file reports performance under zero-shot (ZS) and fine-tuned (FT) settings using EEGPT and the TUEV and TUAB datasets.
+
+Dataset: TUEV
+ZS          0.137 ± 0.061 0.154 ± 0.077 0.164 ± 0.015 0.832 ± 0.008 0.229 ± 0.071
+FT          0.783 ± 0.025 0.767 ± 0.021 0.478 ± 0.060 0.928 ± 0.006 0.567 ± 0.070
+
+Dataset: TUAB
+ZS          0.503 ± 0.049 0.302 ± 0.163 0.288 ± 0.244 0.685 ± 0.290 0.485 ± 0.095
+FT          0.798 ± 0.013 0.768 ± 0.001 0.728 ± 0.019 0.857 ± 0.038 0.814 ± 0.037

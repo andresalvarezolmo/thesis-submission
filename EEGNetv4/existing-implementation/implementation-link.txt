@@ -1,0 +1,2 @@
+This experiments extended the existing setup from: BCI-2023-Workshop_Learning-from-small-datasets
+To explore this please run: git clone git@github.com:MTangermann/BCI-2023-Workshop_Learning-from-small-datasets.git

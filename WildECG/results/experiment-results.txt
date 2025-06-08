@@ -1,0 +1,16 @@
+WildECG Experiments
+
+This file reports performance under zero-shot (ZS) and fine-tuned (FT) settings using WildECG and the WESAD and LUDB and PTB-XL datasets.
+
+Dataset: WESAD
+Setting     Accuracy      F1           Recall       Specificity   Precision
+ZS          0.333 ± 0.279 0.258 ± 0.236 0.333 ± 0.279 0.197 ± 0.393 0.260 ± 0.292
+FT          0.833 ± 0.105 0.822 ± 0.119 0.833 ± 0.105 0.903 ± 0.145 0.885 ± 0.064
+
+Dataset: LUDB
+ZS          0.455 ± 0.209 0.329 ± 0.129 0.502 ± 0.335 0.321 ± 0.413 0.275 ± 0.156
+FT          0.860 ± 0.080 0.818 ± 0.098 0.813 ± 0.090 0.920 ± 0.061 0.854 ± 0.117
+
+Dataset: PTB-XL
+ZS          0.225 ± 0.105 0.164 ± 0.048 0.201 ± 0.031 0.819 ± 0.020 0.086 ± 0.048
+FT          0.420 ± 0.003 0.422 ± 0.001 0.373 ± 0.001 0.878 ± 0.001 0.511 ± 0.010
