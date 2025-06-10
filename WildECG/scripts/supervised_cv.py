@@ -16,6 +16,9 @@ torch.set_float32_matmul_precision("high")
 
 # Used for WESAD and LUDB
 
+# The majority of this code belongs to the original implementation of WildECG, this experiment mostly entailed fixing the evaluation pipeline to be consistent with the other experiments of this Thesis
+
+
 if __name__ == "__main__":
 
     # --------------
