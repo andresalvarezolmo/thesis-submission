@@ -20,10 +20,6 @@ import torch
 
 # %%
 def remove_clf_layers(model: nn.Sequential):
-    """
-    Remove the classification layers from braindecode models.
-    Tested on EEGNetv4, Deep4Net (i.e. DeepConvNet), and EEGResNet.
-    """
     new_layers = []
     for name, layer in model.named_children():
         if 'classif' in name:

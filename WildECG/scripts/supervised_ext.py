@@ -11,6 +11,9 @@ from src.loaders import get_dataset
 from src.models import ResNet1D, S4Model
 from src.trainers import *
 
+
+# The majority of this code belongs to the original implementation of WildECG, this experiment mostly entailed fixing the evaluation pipeline to be consistent with the other experiments of this Thesis
+
 # Used for PTB-XL
 
 if __name__ == "__main__":

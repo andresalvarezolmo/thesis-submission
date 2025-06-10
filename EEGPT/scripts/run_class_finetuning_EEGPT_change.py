@@ -21,6 +21,7 @@ from utils import NativeScalerWithGradNormCount as NativeScaler
 import utils
 from Modules.models.EEGPT_mcae_finetune_change import EEGPTClassifier
 
+# The majority of this code belongs to the original implementation of EEGPT, this experiment mostly entailed fixing the evaluation pipeline to be consistent with the other experiments of this Thesis
 
 def get_args():
     parser = argparse.ArgumentParser('fine-tuning and evaluation script for EEG classification', add_help=False)

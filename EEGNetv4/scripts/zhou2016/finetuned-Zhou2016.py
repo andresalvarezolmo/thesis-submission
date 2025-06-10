@@ -6,8 +6,8 @@ from skorch.utils import to_numpy
 from sklearn.base import TransformerMixin
 from braindecode.models import EEGNetv4
 from huggingface_hub import hf_hub_download
-from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
+from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import FunctionTransformer
 from moabb.paradigms import MotorImagery
 from moabb.datasets import Zhou2016
@@ -41,8 +41,8 @@ class FrozenNeuralNetTransformer(NeuralNet, TransformerMixin):
     def __init__(
             self,
             *args,
-            criterion=nn.MSELoss, 
-            unique_name=None,  
+            criterion=nn.MSELoss,  # should be unused
+            unique_name=None,  # needed for a unique digest in MOABB
             **kwargs
     ):
         super().__init__(
@@ -54,7 +54,7 @@ class FrozenNeuralNetTransformer(NeuralNet, TransformerMixin):
         self.unique_name = unique_name
 
     def fit(self, X, y=None, **fit_params):
-        return self  
+        return self  # do nothing
 
     def transform(self, X):
         X = self.infer(X)
@@ -87,7 +87,7 @@ embedding = freeze_model(remove_clf_layers(torch_module)).double()
 sklearn_pipeline = Pipeline([
     ('embedding', FrozenNeuralNetTransformer(embedding, unique_name='pretrained_Lee2019')),
     ('flatten', FunctionTransformer(flatten_batched)),
-    ('classifier', KNeighborsClassifier(n_neighbors=7)),
+    ('classifier', LogisticRegression()),
 ])
 
 # %%
